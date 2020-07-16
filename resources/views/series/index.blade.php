@@ -20,8 +20,9 @@
         @foreach($series as $serie)
             <li class='list-group-item d-flex w-100 justify-content-between align-items-center'>
                 <p class='p-0 m-0'>{{ $serie->nome }}</p>
-                <form method="post" action="{{route('remover_serie', $serie->id)}}" onsubmit="return confirm('Tem certeza que deseja remover {{ addslashes($serie->nome)  }} ?')" >
+                <form class="d-flex align-items-center" method="post" action="{{route('remover_serie', $serie->id)}}" onsubmit="return confirm('Tem certeza que deseja remover {{ addslashes($serie->nome)  }} ?')" >
                     @csrf
+                    <a href="/serie/{{$serie->id}}/temporadas"><i class="fas fa-external-link-alt"></i></a>
                     @method('DELETE')
                     <button type="submit" class='btn'><i class="far fa-trash-alt"></i></button>
                 </form>

@@ -26,14 +26,18 @@ class SeriesFormRequest extends FormRequest
         return [
             'nome' => 'required',
             'nome' => 'min:3',
+            'numero_temporadas' => 'required',
+            'qtd_episodios' => 'required',
         ];
     }
 
     public function messages()
     {
         return [
-          'nome.require' => 'O campo nome é obrigatório.',
-          'nome.min' => 'O campo :attribute precisar ter ao menos três caracteres.',
+            'nome.require' => 'O campo nome é obrigatório.',
+            'nome.min' => 'O campo :attribute precisar ter ao menos três caracteres.',
+            'numero_temporadas.required' => 'O campo "numero de temporadas" precisa ser preenchido.',
+            'qtd_episodios.required' => 'O campo "quantidade de episódios" precisa ser preenchido.',
         ];
     }
 }

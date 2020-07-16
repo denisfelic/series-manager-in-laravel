@@ -6,10 +6,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property mixed nome
+ */
 class Serie extends Model
 {
-//    protected $table = 'series'; // laravel busca automaticamente pelo nome da classe em minusco no plural
-    // Então nesse caso não é necessario iniciar a variavel, pois o nome da tabela no banco é ja é "series"
+    // protected $table = 'series'; O Laravel busca automaticamente pelo nome da classe em minusculo no plural
+    // Então nesse caso não é necessário iniciar a variável, pois o nome da tabela no banco é ja é "series"
 
     /*
      *  false -> para ignorar created_at e updated_at, caso queira atualizar, basta definir na migration:
@@ -22,10 +25,9 @@ class Serie extends Model
      */
     protected $fillable = ['nome'];
 
-
     public function temporadas()
     {
-        $this->hasMany(Temporada::class);
+        return $this->hasMany(Temporada::class);
     }
 
 }
