@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Services;
-
 
 use App\Episodio;
 use App\Serie;
@@ -48,6 +46,7 @@ class RemovedorDeSerie
         $temporada->episodios()->each(function (Episodio $episodio) {
             $episodio->delete();
         });
+
         $temporada->delete();
     }
 }
