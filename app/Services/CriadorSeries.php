@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class CriadorSeries
 {
 
-    // FIXME: This is only an test
+    // FIXME: This is only an test.
     public function criarSerie(string $nomeSerie, int $numeroTemporadas, int $quantidadeEpisodios): string
     {
 
