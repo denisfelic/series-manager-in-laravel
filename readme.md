@@ -30,10 +30,11 @@ Run the migrations:
 
 ``$ php artisan migrate``
 
+Generate a key 
+
+``$ php artisan key:generate``
+
 Run the server with
 
 ``$ php artisan serve``
 
-*Ignore*
-
-// php artisan key:generate TODO: test this command
