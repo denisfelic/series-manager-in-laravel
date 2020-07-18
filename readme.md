@@ -1,27 +1,30 @@
-###Requeriments
 
-php 7.4^
+### Requeriments
+Php 7.4^
+Composer
 
-composer  
+### Commands
+``$ composer install``
 
-###Commands
+In the root of project, rename the file
+ `` .env-example ``
+  to:
+   ``.env ``
 
-$ composer install
+Inside of ``.env``, uncomment and set the fallowing line
 
-change the file .env-example to .env 
+``DB_CONNECTION=sqlite``
 
-in the .env file, uncomment and set the fallowing line
+Enter in the /database folder, from the root of the project
 
-DB_CONNECTION=sqlite
+And create a file: ``database.sqlite``
 
-cd /database 
+Run the migrations:
+``$ php artisan migrate``
 
-create a file: database.sqlite
-
-$php artisan migrate
-
-$php artisan serve
+Run the server with
+``$ php artisan serve``
 
 
+*Ignore*
 // php artisan key:generate TODO: test this command
-
